@@ -29,14 +29,14 @@ Hits::Hits(Cell*upon): Sprite(MOLE,upon), hits(0)
 }
 
 void Hits::Play(Area&area) {
-    Show(mask->Face(hits));
+    Show(mask->Face(hits)); // updating the clock face
 }
 
 // gain method for upping hits
 void Hits::Gain() {
-    ++hits;
+    ++hits; //gain on mole wack
 }
 
 int Hits::getHits(){
-    return hits;
+    return hits; // get the hits for score keeping.
 }

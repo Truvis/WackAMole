@@ -22,6 +22,8 @@ class Mole : public Sprite
         int Below;
         bool Seen;
         int Ticks;
+
+        static int CurrentMoles;
 };
 
 #endif // MOLE_H

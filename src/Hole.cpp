@@ -16,6 +16,6 @@ void Hole::Play(Area&area) {
 }
 
 Hole::Hole(Cell*cell) : Sprite(HOLE,cell){
-    Show(MHOLE);
+    Show(MHOLE); // show hole on cell
 }
 

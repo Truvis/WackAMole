@@ -28,7 +28,7 @@ virtual~Area();
         Roll rollHigh{high};
         Roll rollWide{wide};
     private:
-        static const int TRYS = 1;
+        static const int TRYS = 50;
 };
 
 #endif // AREA_H

@@ -97,5 +97,6 @@ void Club::Play(Area&area) {
 
 Club::Club(Cell*cell, Hits*hits, Team*team)
     : Sprite(CLUB,cell),hits(hits),team(team){
+    // start club in the hold mode
     Show(HOLD);
 }

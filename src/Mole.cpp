@@ -11,6 +11,8 @@ Char *MMOLE = HUE(31,40)
 "X        X" CR(10)
 "XXXXXXXXXX" CLR;
 
+int Mole::CurrentMoles = 0;
+
 void Mole::Play(Area&area) {
     // logic loop for showing and hiding the mole
     // show mole in hole then hide the mole in the hole.
@@ -23,23 +25,27 @@ void Mole::Play(Area&area) {
             // call our globally used method for hiding moles
             Hide();
         } // otherwise show mole
-        else {
+        else { // make yourself shown.
             Seen=true;
-            Ticks=Above;
-            Show(MMOLE);
+            Ticks=Above; // reset above timer that mole should stay above.
+            Show(MMOLE); // show the above mole picture.
         }
     }
 }
 
 Mole::Mole(Cell*cell, int Above, int Below)
         : Sprite(MOLE,cell), Above(Above), Below(Below) {
+        // start mole in up mode
     Show(MMOLE);
-    Seen = true;
-    Ticks = Above;
+    Seen = true; // reset above timer that mole should stay above.
+    Ticks = Above; // show the above mole picture.
 }
 
 void Mole::Hide(){
     Seen=false;
     Ticks=Below;
-    Show(0);
+    // remove the mole
+    Upon(0);
+    // set current mole count down to recyle mole in memory
+    --CurrentMoles;
 }

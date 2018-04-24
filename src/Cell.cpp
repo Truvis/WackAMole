@@ -22,7 +22,7 @@ Cell::Cell(int row,   int col, Char*site) : down(row), over(col)  {
 Char*Cell::Have(SLOT slot) { return (show[slot]); }
 
 void Cell::Show(SLOT slot, Char*ansi) {
-     show[slot]=ansi;
+     show[slot]=ansi; // slot/layer ANSI code text.
      seen=false;
 }
 

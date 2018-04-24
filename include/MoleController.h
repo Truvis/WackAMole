@@ -13,7 +13,7 @@ class MoleController : public Mole
     protected:
         Team*team;
         int MOLES;
-        int CurrentMoles;
+
 
     private:
 };

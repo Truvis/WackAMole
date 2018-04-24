@@ -12,13 +12,13 @@ using namespace std;
 #include "Keep.h"
 #include "MoleController.h"
 
-SET(High,  4);  // how many cells high is the arena
+SET(High,  3);  // how many cells high is the arena
 SET(Wide,  8);  // how many cells wide is the arena
 SET(Down,  8);  // how many letters down is a cell
 SET(Over, 10);  // how many letters over is a cell
 SET(ABOVE, 3);  // number of moles
 SET(BELOW, 2);  // seconds a mole stays up
-SET(HOLES, 10);  // how many holes
+SET(HOLES, 6);  // how many holes
 SET(MOLES, 3);  // set moles
 SET(Game, 60);  // how many seconds long is a game
 SET(Wait,250);  // how many milliseconds used to throttle the user

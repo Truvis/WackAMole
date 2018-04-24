@@ -7,6 +7,7 @@ string Keep::filename = "scores.txt";
 
 Keep::Keep()
 {
+    // initial starting values.
     name = "TT";
     score = 0;
     getScore();

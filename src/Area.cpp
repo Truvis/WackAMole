@@ -47,16 +47,17 @@ Cell* Area::Move(Cell*currentcell,int Yvalue,int Xvalue){
     return Upon(currentcell->Down()+Yvalue,currentcell->Over()+Xvalue);
 }
 
-Cell*Area::FindingRandomly(SLOT having, SLOT nothaving){
-    /// adding holes.
-    /// slot check having this
+Cell*Area::FindingRandomly(SLOT having, SLOT nothaving){ // if either argument is 0 it's not tested.
+    // adding holes.
+    // slot check having this
     for(int t=0;t<TRYS;t++){
+        // get our rolls/random values.
         int row = rollHigh.Invoke();
         int col = rollWide.Invoke();
         Cell* cell = Upon(row,col);
-        /// if found. check to see if not having something there.
+        // if found. check to see if not having something there.
         if(having==ZERO || cell->Have(having)){
-            /// nothing found add.
+            // nothing found then we know thw slow is free to have added.
             if(nothaving==ZERO || !cell->Have(nothaving)){
                 return cell;
 

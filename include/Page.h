@@ -1,11 +1,12 @@
 #ifndef PAGE_H
 #define PAGE_H
 
+#include "screen.cpp"
 #include "Fail.h"
 
 #define      _KEY(_key_)     ((1<<8)|_key_)
 
-class Page                      // manages the reading and writing to console page
+class Page : public screen                      // manages the reading and writing to console page
 {
     public:
         Page(int high, int wide, int cellHigh, int cellWide);
